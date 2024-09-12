@@ -3,7 +3,7 @@ import type { Config } from "@docusaurus/types";
 const config: Config = {
   title: "Wave Terminal Documentation",
   tagline: "Wavy Wavy Wavy",
-  favicon: "img/wave-logo_appicon.svg",
+  favicon: "img/logo/wave-logo_appicon.svg",
 
   // Set the production url of your site here
   url: "https://wavetermdev.github.io/",
@@ -52,8 +52,8 @@ const config: Config = {
     },
     navbar: {
       logo: {
-        src: "img/wave-light.png",
-        srcDark: "img/wave-dark.png",
+        src: "img/logo/wave-light.png",
+        srcDark: "img/logo/wave-dark.png",
         href: "https://waveterm.dev/",
         height: "32px",
       },

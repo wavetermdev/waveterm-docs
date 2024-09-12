@@ -1,5 +1,8 @@
 name: Test deployment
 
+env:
+  NODE_VERSION: 22
+
 on:
   pull_request:
     branches:
@@ -17,8 +20,7 @@ jobs:
           fetch-depth: 0
       - uses: actions/setup-node@v4
         with:
-          node-version: 20
-          cache: yarn
+          node-version: ${{env.NODE_VERSION}}
       - name: Install yarn
         run: corepack enable && yarn install
       - name: Install dependencies

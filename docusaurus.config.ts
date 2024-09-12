@@ -77,6 +77,7 @@ const config: Config = {
       ],
     },
   },
+  staticDirectories: ["static"],
 };
 
 export default config;

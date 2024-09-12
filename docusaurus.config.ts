@@ -1,41 +1,43 @@
-import type {Config} from '@docusaurus/types';
+import type { Config } from "@docusaurus/types";
 
 const config: Config = {
-  title: 'Wave Terminal Documentation',
-  tagline: 'Wavy Wavy Wavy',
-  favicon: 'img/wave-logo_appicon.svg',
+  title: "Wave Terminal Documentation",
+  tagline: "Wavy Wavy Wavy",
+  favicon: "img/wave-logo_appicon.svg",
 
   // Set the production url of your site here
-  url: 'https://your-docusaurus-site.example.com',
+  url: "https://your-docusaurus-site.example.com",
   // Set the /<baseUrl>/ pathname under which your site is served
   // For GitHub pages deployment, it is often '/<projectName>/'
-  baseUrl: '/',
+  baseUrl: "/",
 
   // GitHub pages deployment config.
   // If you aren't using GitHub pages, you don't need these.
-  organizationName: 'wavetermdev', // Usually your GitHub org/user name.
-  projectName: 'waveterm-docs', // Usually your repo name.
+  organizationName: "wavetermdev", // Usually your GitHub org/user name.
+  projectName: "waveterm-docs-new", // Usually your repo name.
+  deploymentBranch: "main",
 
-  onBrokenLinks: 'throw',
-  onBrokenMarkdownLinks: 'warn',
+  onBrokenLinks: "throw",
+  onBrokenMarkdownLinks: "warn",
   trailingSlash: false,
 
   // Even if you don't use internationalization, you can use this field to set
   // useful metadata like html lang. For example, if your site is Chinese, you
   // may want to replace "en" with "zh-Hans".
   i18n: {
-    defaultLocale: 'en',
-    locales: ['en'],
+    defaultLocale: "en",
+    locales: ["en"],
   },
   plugins: [
-    ['content-docs', {
-      path: 'docs',
-      routeBasePath: '/'
-    } as import('@docusaurus/plugin-content-docs').Options],
+    [
+      "content-docs",
+      {
+        path: "docs",
+        routeBasePath: "/",
+      } as import("@docusaurus/plugin-content-docs").Options,
+    ],
   ],
-  themes: [
-    'classic',
-  ],
+  themes: ["classic"],
   themeConfig: {
     docs: {
       sidebar: {
@@ -44,37 +46,37 @@ const config: Config = {
       },
     },
     colorMode: {
-      defaultMode: 'light',
+      defaultMode: "light",
       disableSwitch: true,
-      respectPrefersColorScheme: true
+      respectPrefersColorScheme: true,
     },
     navbar: {
       logo: {
         src: "img/wave-light.png",
         srcDark: "img/wave-dark.png",
         href: "https://waveterm.dev/",
-        height: "32px"
+        height: "32px",
       },
       hideOnScroll: true,
       items: [
         {
-          type: 'docsVersionDropdown',
-          position: 'right',
+          type: "docsVersionDropdown",
+          position: "right",
         },
         {
-          type: 'localeDropdown',
-          position: 'right',
+          type: "localeDropdown",
+          position: "right",
         },
         {
           label: "Github",
-          href: 'https://github.com/wavetermdev/waveterm',
-          position: 'right',
-          className: 'header-github-link',
-          'aria-label': 'GitHub repository',
+          href: "https://github.com/wavetermdev/waveterm",
+          position: "right",
+          className: "header-github-link",
+          "aria-label": "GitHub repository",
         },
-      ]
-    }
-  }
+      ],
+    },
+  },
 };
 
 export default config;

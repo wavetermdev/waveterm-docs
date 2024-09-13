@@ -20,7 +20,6 @@
         "@docusaurus/plugin-debug": "^3.5.2",
         "@docusaurus/plugin-sitemap": "^3.5.2",
         "@docusaurus/theme-classic": "^3.5.2",
-        "@docusaurus/theme-search-algolia": "^3.5.2",
         "@mdx-js/react": "^3.0.0",
         "clsx": "^2.0.0",
         "prism-react-renderer": "^2.3.0",
@@ -29,6 +28,7 @@
     },
     "devDependencies": {
         "@docusaurus/module-type-aliases": "3.5.2",
+        "@docusaurus/plugin-ideal-image": "^3.5.2",
         "@docusaurus/tsconfig": "3.5.2",
         "@docusaurus/types": "3.5.2",
         "@eslint/js": "^9.9.0",

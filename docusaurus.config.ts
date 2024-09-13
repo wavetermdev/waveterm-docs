@@ -36,8 +36,9 @@ const config: Config = {
                 routeBasePath: "/",
             } as import("@docusaurus/plugin-content-docs").Options,
         ],
+        "ideal-image",
     ],
-    themes: ["classic"],
+    themes: [["classic", { customCss: "src/css/custom.css" }]],
     themeConfig: {
         docs: {
             sidebar: {
@@ -58,6 +59,12 @@ const config: Config = {
             },
             hideOnScroll: true,
             items: [
+                {
+                    type: "doc",
+                    position: "left",
+                    docId: "index",
+                    label: "Docs",
+                },
                 {
                     type: "docsVersionDropdown",
                     position: "right",

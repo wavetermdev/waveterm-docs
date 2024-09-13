@@ -42,7 +42,6 @@
     "prettier-plugin-organize-imports": "^4.0.0",
     "remark-cli": "^12.0.1",
     "remark-frontmatter": "^5.0.0",
-    "remark-lint": "^10.0.0",
     "remark-mdx": "^3.0.1",
     "remark-preset-lint-consistent": "^6.0.0",
     "remark-preset-lint-recommended": "^7.0.0",

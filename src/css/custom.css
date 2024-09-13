@@ -18,16 +18,15 @@
     --ifm-color-primary-lightest: #8cd47d;
 }
 
-.header-github-link {
-    div {
-        height: 24px;
-        width: 24px;
-        background-color: var(--ifm-font-color-base);
-        mask: url(/img/Octicons-mark-github.svg) no-repeat center / contain;
-        -webkit-mask: url(/img/Octicons-mark-github.svg) no-repeat center / contain;
-        transition: background-color 0.15s linear;
-    }
-    div:hover {
-        background-color: var(--ifm-color-primary);
-    }
+.header-github-link div {
+    height: 24px;
+    width: 24px;
+    background-color: var(--ifm-font-color-base);
+    mask: url(/img/Octicons-mark-github.svg) no-repeat center / contain;
+    -webkit-mask: url(/img/Octicons-mark-github.svg) no-repeat center / contain;
+    transition: background-color 0.15s linear;
+}
+
+.header-github-link:hover div {
+    background-color: var(--ifm-color-primary);
 }

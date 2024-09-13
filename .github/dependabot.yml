@@ -1,0 +1,28 @@
+version: 2
+updates:
+    - package-ecosystem: "npm"
+      directory: "/"
+      schedule:
+          interval: "weekly"
+          day: "friday"
+          time: "09:00"
+          timezone: "America/Los_Angeles"
+      groups:
+          dev-dependencies:
+              dependency-type: "development"
+              exclude-patterns:
+                  - "*docusaurus*"
+          docusaurus:
+              patterns:
+                  - "*docusaurus*"
+          prod-dependencies:
+              dependency-type: "production"
+              exclude-patterns:
+                  - "*docusaurus*"
+    - package-ecosystem: "github-actions"
+      directory: "/.github/workflows"
+      schedule:
+          interval: "weekly"
+          day: "friday"
+          time: "09:00"
+          timezone: "America/Los_Angeles"

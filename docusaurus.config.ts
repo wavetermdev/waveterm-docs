@@ -66,14 +66,6 @@ const config: Config = {
                     label: "Docs",
                 },
                 {
-                    type: "docsVersionDropdown",
-                    position: "right",
-                },
-                {
-                    type: "localeDropdown",
-                    position: "right",
-                },
-                {
                     label: "Github",
                     href: "https://github.com/wavetermdev/waveterm",
                     position: "right",

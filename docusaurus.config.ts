@@ -66,7 +66,7 @@ const config: Config = {
                     label: "Docs",
                 },
                 {
-                    label: "Github",
+                    html: "<div/>",
                     href: "https://github.com/wavetermdev/waveterm",
                     position: "right",
                     className: "header-github-link",

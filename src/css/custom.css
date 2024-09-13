@@ -17,3 +17,11 @@
     --ifm-color-primary-lighter: #72cb5f;
     --ifm-color-primary-lightest: #8cd47d;
 }
+
+.header-github-link div {
+    height: 24px;
+    width: 24px;
+    background-color: var(--ifm-font-color-base);
+    mask: url(/img/Octicons-mark-github.svg) no-repeat center / contain;
+    -webkit-mask: url(/img/Octicons-mark-github.svg) no-repeat center / contain;
+}

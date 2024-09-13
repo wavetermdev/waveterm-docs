@@ -75,6 +75,9 @@ const config: Config = {
         },
       ],
     },
+    footer: {
+      copyright: `Copyright © ${new Date().getFullYear()} Command Line Inc. Built with Docusaurus.`,
+    },
   },
   staticDirectories: ["static"],
 };

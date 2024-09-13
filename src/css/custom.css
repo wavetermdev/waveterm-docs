@@ -24,4 +24,8 @@
     background-color: var(--ifm-font-color-base);
     mask: url(/img/Octicons-mark-github.svg) no-repeat center / contain;
     -webkit-mask: url(/img/Octicons-mark-github.svg) no-repeat center / contain;
+    &:hover {
+        background-color: var(--ifm-color-primary);
+    }
+    transition: background-color 0.15s linear;
 }

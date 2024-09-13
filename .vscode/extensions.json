@@ -1,8 +1,8 @@
 {
-  "recommendations": [
-    "esbenp.prettier-vscode",
-    "dbaeumer.vscode-eslint",
-    "unifiedjs.vscode-mdx",
-    "unifiedjs.vscode-remark"
-  ]
+    "recommendations": [
+        "esbenp.prettier-vscode",
+        "dbaeumer.vscode-eslint",
+        "unifiedjs.vscode-mdx",
+        "unifiedjs.vscode-remark"
+    ]
 }

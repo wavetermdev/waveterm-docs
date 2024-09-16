@@ -53,8 +53,8 @@ const config: Config = {
         },
         navbar: {
             logo: {
-                src: "img/logo/wave-light.png",
-                srcDark: "img/logo/wave-dark.png",
+                src: "img/logo/wave-logo_horizontal-coloronwhite.png",
+                srcDark: "img/logo/wave-logo_horizontal-coloronblack.png",
                 href: "https://waveterm.dev/",
             },
             hideOnScroll: true,

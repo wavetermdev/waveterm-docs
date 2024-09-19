@@ -5,6 +5,12 @@
     "editor.tabSize": 4,
     "editor.insertSpaces": false,
     "prettier.useEditorConfig": true,
+    "[plaintext]": {
+        "editor.formatOnSave": false,
+        "editor.formatOnPaste": false,
+        "files.insertFinalNewline": false,
+        "files.trimFinalNewlines": true
+    },
     "[javascript]": {
         "editor.defaultFormatter": "esbenp.prettier-vscode"
     },
@@ -36,5 +42,8 @@
     },
     "[markdown]": {
         "editor.defaultFormatter": "unifiedjs.vscode-remark"
+    },
+    "files.associations": {
+        "CNAME": "plaintext"
     }
 }

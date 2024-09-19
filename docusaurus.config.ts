@@ -2,7 +2,7 @@ import type { Config } from "@docusaurus/types";
 
 const config: Config = {
     title: "Wave Terminal Documentation",
-    tagline: "Wavy Wavy Wavy",
+    tagline: "An Open-Source, AI-Native, Terminal Built for Seamless Workflows",
     favicon: "img/logo/wave-logo_appicon.svg",
 
     // Set the production url of your site here

@@ -55,7 +55,7 @@ const config: Config = {
             logo: {
                 src: "img/logo/wave-light.png",
                 srcDark: "img/logo/wave-dark.png",
-                href: "https://waveterm.dev/",
+                href: "https://beta.waveterm.dev/",
             },
             hideOnScroll: true,
             items: [

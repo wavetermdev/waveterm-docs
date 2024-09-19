@@ -4,7 +4,9 @@ sidebar_position: 1
 
 # Introduction
 
-Let's discover **Docusaurus in less than 5 minutes**.
+## Welcome to Wave Terminal
+
+Wave is an open-source terminal that adds the ability to launch graphical widgets, controlled and integrated directly with the CLI.
 
 ## Getting Started
 

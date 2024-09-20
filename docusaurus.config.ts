@@ -66,10 +66,10 @@ const config: Config = {
                     label: "Docs",
                 },
                 {
-                    html: "<div/>",
+                    // html: '<div class="fa-github"/>',
                     href: "https://github.com/wavetermdev/waveterm",
                     position: "right",
-                    className: "header-github-link",
+                    className: "fa-github fa-brands navbar-icon",
                     "aria-label": "GitHub repository",
                 },
             ],
@@ -78,6 +78,11 @@ const config: Config = {
             copyright: `Copyright © ${new Date().getFullYear()} Command Line Inc. Built with Docusaurus.`,
         },
     },
+    stylesheets: [
+        "fontawesome/css/fontawesome.min.css",
+        "fontawesome/css/brands.min.css",
+        "fontawesome/css/solid.min.css",
+    ],
     staticDirectories: ["static"],
 };
 

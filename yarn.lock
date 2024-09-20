@@ -8198,6 +8198,13 @@ __metadata:
   languageName: node
   linkType: hard
 
+"mdast@npm:^3.0.0":
+  version: 3.0.0
+  resolution: "mdast@npm:3.0.0"
+  checksum: 10c0/dce2d68e9772705b675e7ebb543640e9f1361ff874eed818677304a351486904f427f87deff8bbd21942e58ed0d2ee3ddcfc1d010aea0de92b4a62ff0f94f0ff
+  languageName: node
+  linkType: hard
+
 "mdn-data@npm:2.0.28":
   version: 2.0.28
   resolution: "mdn-data@npm:2.0.28"
@@ -11356,6 +11363,17 @@ __metadata:
   languageName: node
   linkType: hard
 
+"remark-typescript-code-import@npm:^1.0.1":
+  version: 1.0.1
+  resolution: "remark-typescript-code-import@npm:1.0.1"
+  dependencies:
+    mdast: "npm:^3.0.0"
+    typescript: "npm:^5.3.3"
+    unist-util-visit: "npm:^5.0.0"
+  checksum: 10c0/6a7603dafa2cab8740d49caf285f264327401a3473fc6350605bbc575f3c633266f2f1c633083174323bbd35bc58863ff4fac09fea6b35bc37ca781365803f39
+  languageName: node
+  linkType: hard
+
 "remark@npm:^15.0.0":
   version: 15.0.1
   resolution: "remark@npm:15.0.1"
@@ -12669,7 +12687,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"typescript@npm:^5.5.2":
+"typescript@npm:^5.3.3, typescript@npm:^5.5.2":
   version: 5.6.2
   resolution: "typescript@npm:5.6.2"
   bin:
@@ -12679,7 +12697,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"typescript@patch:typescript@npm%3A^5.5.2#optional!builtin<compat/typescript>":
+"typescript@patch:typescript@npm%3A^5.3.3#optional!builtin<compat/typescript>, typescript@patch:typescript@npm%3A^5.5.2#optional!builtin<compat/typescript>":
   version: 5.6.2
   resolution: "typescript@patch:typescript@npm%3A5.6.2#optional!builtin<compat/typescript>::version=5.6.2&hash=8c6c40"
   bin:
@@ -13195,9 +13213,11 @@ __metadata:
     react-dom: "npm:^18.0.0"
     remark-cli: "npm:^12.0.1"
     remark-frontmatter: "npm:^5.0.0"
+    remark-gfm: "npm:^4.0.0"
     remark-mdx: "npm:^3.0.1"
     remark-preset-lint-consistent: "npm:^6.0.0"
     remark-preset-lint-recommended: "npm:^7.0.0"
+    remark-typescript-code-import: "npm:^1.0.1"
     typescript: "npm:^5.5.2"
     typescript-eslint: "npm:^8.4.0"
   languageName: unknown

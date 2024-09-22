@@ -1,0 +1,60 @@
+---
+sidebar_position: 3
+id: "config"
+title: "Configuration"
+---
+
+Wave's configuration files are located at `~/.waveterm/config/`.
+
+The main configuration file is `settings.json` (`~/.waveterm/config/settings.json`).
+
+The file is structured as a mostly flat JSON file.  Instead of using sub-objects we prefer to
+use ":" as level separators.
+
+| Key Name | Type | Function |
+|----------|------|----------|
+| ai:baseurl | string | Set the AI Base Url (must be OpenAI compatible) |
+| ai:apitoken | string | your AI api token |
+| ai:name | string | string to display in the Wave AI block header |
+| ai:model | string | model name to pass to API |
+| ai:maxtokens | int | max tokens to pass to API |
+| ai:timeoutms | int | timeout (in milliseconds) for AI calls |
+| term:fontsize | float | the fontsize for the terminal block |
+| term:fontfamily | string | font family to use for terminal block |
+| term:disablewebgl | bool | set to false to disable WebGL acceleration in terminal |
+| editor:minimapenabled | bool | set to false to disable editor minimap |
+| editor:stickscrollenabled | bool | |
+| web:openlinksinternally | bool | set to false to open web links in external browser |
+| web:defaulturl | string | default web page to open in the web widget when no url is provided (homepage) |
+| web:defaultsearch | string | search template for web searches.  e.g. `https://www.google.com/search?q={query}`.  "\{query}" gets replaced by search term |
+| blockheader:showblockids | bool | show first 8 chars of blockid in the header |
+| autoupdate:enabled | bool | enable/disable checking for updates |
+| autoupdate:intervalms | float64 | time in milliseconds to wait between update checks |
+| autoupdate:installonquit | bool | whether to automatically install updates on quit |
+| autoupdate:channel | string | the auto update channel |
+| widget:showhelp | bool | whether to show help/tips widgets in right sidebar |
+| window:transparent | bool | set to true to enable window transparency (on platform where it is supported) |
+| widow:blur | bool | set to enable window background blurring |
+| window:opacity | float64 | 0-1, window opacity |
+| window:bgcolor | string | set the window background color (should be hex: #xxxxxx) |
+| window:reducemotion | bool | set to true to disable most animations |
+| window:tilegapsize | int | set to change override default gap between blocks |
+| telemetry:enabled | bool | set to enable/disable telemetry |
+
+For reference this is the current default configuration (v0.8.0):
+
+```json
+{
+    "ai:model": "gpt-4o-mini",
+    "ai:maxtokens": 1000,
+    "ai:timeoutms": 10000,
+    "autoupdate:enabled": true,
+    "autoupdate:installonquit": true,
+    "autoupdate:intervalms": 3600000,
+    "editor:minimapenabled": true,
+    "web:defaulturl": "https://github.com/wavetermdev/waveterm",
+    "web:defaultsearch": "https://www.google.com/search?q={query}",
+    "window:tilegapsize": 3,
+    "telemetry:enabled": true
+}
+```

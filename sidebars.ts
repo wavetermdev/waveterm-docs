@@ -12,6 +12,11 @@ const sidebars: SidebarsConfig = {
             id: "keybindings",
             label: "Keybindings",
         },
+        {
+            type: "doc",
+            id: "config",
+            label: "Configuration",
+        },
     ],
 };
 

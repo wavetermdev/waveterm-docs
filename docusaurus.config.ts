@@ -34,6 +34,7 @@ const config: Config = {
             {
                 path: "docs",
                 routeBasePath: "/",
+                sidebarPath: require.resolve("./sidebars.ts"),
             } as import("@docusaurus/plugin-content-docs").Options,
         ],
         "ideal-image",

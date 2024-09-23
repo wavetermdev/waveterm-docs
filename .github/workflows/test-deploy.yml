@@ -22,8 +22,8 @@ jobs:
               with:
                   node-version: ${{env.NODE_VERSION}}
             - name: Install yarn
-              run: corepack enable && yarn install
-            - name: Install dependencies
-              run: yarn install
+              run: |
+                  corepack enable
+                  yarn install
             - name: Test build website
               run: yarn build

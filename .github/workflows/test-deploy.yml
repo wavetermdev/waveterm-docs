@@ -24,6 +24,6 @@ jobs:
             - name: Install yarn
               run: corepack enable && yarn install
             - name: Install dependencies
-              run: yarn install --frozen-lockfile
+              run: yarn install
             - name: Test build website
               run: yarn build

@@ -6,7 +6,7 @@ const config: Config = {
     favicon: "img/logo/wave-logo_appicon.svg",
 
     // Set the production url of your site here
-    url: "https://beta.docs.waveterm.dev/",
+    url: "https://betadocs.waveterm.dev/",
     // Set the /<baseUrl>/ pathname under which your site is served
     // For GitHub pages deployment, it is often '/<projectName>/'
     baseUrl: "/",
@@ -55,7 +55,7 @@ const config: Config = {
             logo: {
                 src: "img/logo/wave-light.png",
                 srcDark: "img/logo/wave-dark.png",
-                href: "https://waveterm.dev/",
+                href: "https://www.waveterm.dev/",
             },
             hideOnScroll: true,
             items: [
@@ -77,7 +77,7 @@ const config: Config = {
             copyright: `Copyright © ${new Date().getFullYear()} Command Line Inc. Built with Docusaurus.`,
         },
     },
-    stylesheets: ["fontawesome/css/fontawesome.min.css", "fontawesome/css/sharp-regular.min.css"],
+    stylesheets: ["/fontawesome/css/fontawesome.min.css", "/fontawesome/css/sharp-regular.min.css"],
     staticDirectories: ["static"],
 };
 

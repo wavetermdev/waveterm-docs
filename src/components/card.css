@@ -1,0 +1,35 @@
+.card {
+    display: flex;
+    flex-direction: column;
+    flex: 0 1 14rem;
+    gap: 10px;
+    padding: 10px 10px;
+    min-height: 14rem;
+    max-height: 14rem;
+    overflow: hidden;
+
+    .icon {
+        font-size: 1.5em;
+    }
+
+    .description {
+        color: var(--ifm-font-color-base);
+    }
+
+    border: 2px solid var(--ifm-color-primary-lightest);
+    transition: transform 0.1s ease;
+    transform-origin: 0% 0;
+}
+
+.card:hover {
+    text-decoration: none;
+    transform: translateZ(0) scale(1.024);
+    -webkit-transform: translateZ(0) scale(1.024);
+}
+
+.card-group {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    gap: 10px;
+}

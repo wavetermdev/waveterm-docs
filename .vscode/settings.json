@@ -5,6 +5,7 @@
     "editor.tabSize": 4,
     "editor.insertSpaces": false,
     "prettier.useEditorConfig": true,
+    "mdx.server.enable": true,
     "[plaintext]": {
         "editor.formatOnSave": false,
         "editor.formatOnPaste": false,
@@ -40,7 +41,7 @@
         "editor.insertSpaces": true,
         "editor.autoIndent": "keep"
     },
-    "[markdown]": {
+    "[markdown,mdx]": {
         "editor.defaultFormatter": "unifiedjs.vscode-remark"
     },
     "files.associations": {

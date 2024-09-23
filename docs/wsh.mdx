@@ -140,3 +140,11 @@ wsh conn ensure [user@host]
 ```
 
 This command connects to the specified connection if it isn't already connected.
+
+### setconfig
+
+```
+wsh setconfig [config name]=[config value]
+```
+
+This allows setting various options in the `config/settings.json` file. It will check to be sure a valid config option was provided.

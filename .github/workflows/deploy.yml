@@ -23,9 +23,9 @@ jobs:
               with:
                   node-version: ${{env.NODE_VERSION}}
             - name: Install yarn
-              run: corepack enable && yarn install
-            - name: Install dependencies
-              run: yarn install --frozen-lockfile
+              run: |
+                  corepack enable
+                  yarn install --frozen-lockfile
             - name: Build website
               run: yarn build
 

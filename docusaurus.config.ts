@@ -77,7 +77,7 @@ const config: Config = {
             copyright: `Copyright © ${new Date().getFullYear()} Command Line Inc. Built with Docusaurus.`,
         },
     },
-    stylesheets: ["fontawesome/css/fontawesome.min.css", "fontawesome/css/sharp-regular.min.css"],
+    stylesheets: ["/fontawesome/css/fontawesome.min.css", "/fontawesome/css/sharp-regular.min.css"],
     staticDirectories: ["static"],
 };
 

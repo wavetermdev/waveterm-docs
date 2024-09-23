@@ -66,6 +66,12 @@ const config: Config = {
                     label: "Docs",
                 },
                 {
+                    href: "https://discord.gg/zUeP2aAjaP",
+                    position: "right",
+                    className: "header-link-custom custom-icon-discord",
+                    "aria-label": "Discord invite",
+                },
+                {
                     href: "https://github.com/wavetermdev/waveterm",
                     position: "right",
                     className: "header-link-custom custom-icon-github",

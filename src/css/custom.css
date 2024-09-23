@@ -18,6 +18,10 @@
     --ifm-color-primary-lightest: #8cd47d;
 }
 
+.toggle_node_modules-\@docusaurus-theme-classic-lib-theme-ColorModeToggle-styles-module {
+    margin-left: 4px;
+}
+
 .header-link-custom:before {
     display: block;
     height: 24px;
@@ -32,6 +36,12 @@
 
 .custom-icon-github:before {
     content: "";
-    mask: url(/img/Octicons-mark-github.svg) no-repeat center / contain;
-    -webkit-mask: url(/img/Octicons-mark-github.svg) no-repeat center / contain;
+    mask: url(/img/github.svg) no-repeat center / contain;
+    -webkit-mask: url(/img/github.svg) no-repeat center / contain;
+}
+
+.custom-icon-discord:before {
+    content: "";
+    mask: url(/img/discord.svg) no-repeat center / contain;
+    -webkit-mask: url(/img/discord.svg) no-repeat center / contain;
 }

@@ -1,0 +1,142 @@
+---
+sidebar_position: 4
+id: "wsh"
+title: "Wsh"
+---
+# wsh command
+
+The `wsh` command is always available from Wave blocks.  It is a powerful tool for interacting with Wave blocks and can bridge data between your CLI and the widget GUIs.
+
+---
+
+## view
+You can open a preview block with the contents of any file or directory by running:
+
+```
+wsh view [path]
+```
+
+You can use this command to easily preview images, markdown files, and directories.  For code/text files this will open
+a codeedit block which you can use to quickly edit the file using Wave's embedded graphical editor.
+
+---
+
+## edit
+
+```
+wsh edit [path]
+```
+
+This will open up codeedit for the specified file.  This is useful for quickly editing files on a local or remote machine in our graphical editor.  This command will wait until the file is closed before exiting (unlike \`view\`) so you can set your \`$EDITOR\` to \`wsh editor\` for a seamless experience.  You can combine this with a \`-m\` flag to open the editor in magnified mode.
+
+---
+
+## getmeta
+
+You can view the metadata of any block by running:
+
+```
+wsh getmeta [blockid]
+```
+
+This is especially useful for preview and web blocks as you can see the file or url that they are pointing to and use that in your CLI scripts.
+
+---
+
+## setmeta
+
+You can update any metadata key value pair for blocks (and tabs) by using the setmeta command:
+
+```
+wsh setmeta [blockid] [key]=[value]
+wsh setmeta [blockid] file=~/myfile.txt
+wsh setmeta [blockid] url=https://waveterm.dev/
+```
+
+You can get block and tab ids by right clicking on the appropriate block and selecting "Copy BlockId".  When you
+update the metadata for a preview or web block you'll see the changes reflected instantly in the block.
+
+Other useful metadata values to override block titles, icons, colors, themes, etc.
+
+---
+
+## deleteblock
+
+```
+wsh deleteblock [blockid]
+```
+
+This will delete the block with the specified id.
+
+---
+
+## ssh
+
+```
+wsh ssh [user@host]
+```
+
+This will use Wave's internal ssh implementation to connect to the specified remote machine.
+
+---
+
+## web
+
+You can search for a given url using:
+
+```
+wsh web <url>
+```
+
+Alternatively, you can search with the configured search engine using:
+
+```
+wsh web <search query>
+```
+
+Both of these commands will open a new web block with the desired page.
+
+---
+
+## conn
+
+This has several subcommands which all perform various features related to connections.
+
+### status
+
+```
+wsh conn status
+```
+This command gives the status of all connections made since waveterm started.
+
+### reinstall
+
+```
+wsh conn reinstall [user@host]
+```
+
+This command reinstalls the Wave Shell Extensions on the specified connection.
+
+### disconnect
+
+```
+wsh conn disconnect [user@host]
+```
+
+This command completely disconnects the specified connection. This will apply to all blocks where the connection is being used
+
+### connect
+
+```
+wsh conn connect [user@host]
+```
+
+This command connects to the specified connection but does not create a block for it.
+
+### ensure
+
+```
+wsh conn ensure [user@host]
+```
+
+This command connects to the specified connection if it isn't already connected.

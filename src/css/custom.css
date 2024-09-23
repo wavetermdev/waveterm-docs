@@ -18,6 +18,20 @@
     --ifm-color-primary-lightest: #8cd47d;
 }
 
-.navbar-icon {
-    font-size: 1.45em;
+.header-link-custom:before {
+    display: block;
+    height: 24px;
+    width: 24px;
+    background-color: var(--ifm-navbar-link-color);
+    transition: background-color 0.15s linear;
+}
+
+.header-link-custom:hover:before {
+    background-color: var(--ifm-navbar-link-hover-color);
+}
+
+.custom-icon-github:before {
+    content: "";
+    mask: url(/img/Octicons-mark-github.svg) no-repeat center / contain;
+    -webkit-mask: url(/img/Octicons-mark-github.svg) no-repeat center / contain;
 }

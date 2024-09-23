@@ -6,7 +6,7 @@ const config: Config = {
     favicon: "img/logo/wave-logo_appicon.svg",
 
     // Set the production url of your site here
-    url: "https://betadocs.waveterm.dev/",
+    url: "https://beta.docs.waveterm.dev/",
     // Set the /<baseUrl>/ pathname under which your site is served
     // For GitHub pages deployment, it is often '/<projectName>/'
     baseUrl: "/",
@@ -34,7 +34,6 @@ const config: Config = {
             {
                 path: "docs",
                 routeBasePath: "/",
-                sidebarPath: require.resolve("./sidebars.ts"),
             } as import("@docusaurus/plugin-content-docs").Options,
         ],
         "ideal-image",
@@ -67,10 +66,9 @@ const config: Config = {
                     label: "Docs",
                 },
                 {
-                    // html: '<div class="fa-github"/>',
                     href: "https://github.com/wavetermdev/waveterm",
                     position: "right",
-                    className: "fa-github fa-brands navbar-icon",
+                    className: "header-link-custom custom-icon-github",
                     "aria-label": "GitHub repository",
                 },
             ],
@@ -79,11 +77,7 @@ const config: Config = {
             copyright: `Copyright © ${new Date().getFullYear()} Command Line Inc. Built with Docusaurus.`,
         },
     },
-    stylesheets: [
-        "fontawesome/css/fontawesome.min.css",
-        "fontawesome/css/brands.min.css",
-        "fontawesome/css/solid.min.css",
-    ],
+    stylesheets: ["fontawesome/css/fontawesome.min.css", "fontawesome/css/sharp-regular.min.css"],
     staticDirectories: ["static"],
 };
 

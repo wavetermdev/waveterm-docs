@@ -22,6 +22,11 @@ const sidebars: SidebarsConfig = {
             id: "telemetry",
             label: "Telemetry",
         },
+        {
+            type: "doc",
+            id: "wsh",
+            label: "Wsh",
+        },
     ],
 };
 

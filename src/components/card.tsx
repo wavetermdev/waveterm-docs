@@ -8,12 +8,16 @@ interface CardProps {
     href: string;
 }
 
-export default function Card({ icon, title, description, href }: CardProps) {
+export function Card({ icon, title, description, href }: CardProps) {
     return (
         <a className="card" href={href}>
             <div className={clsx("icon", "fa-sharp fa-regular", icon)} />
-            <h2>{title}</h2>
-            <p>{description}</p>
+            <h2 className="title">{title}</h2>
+            <p className="description">{description}</p>
         </a>
     );
+}
+
+export function CardGroup({ children }) {
+    return <div className="card-group">{children}</div>;
 }

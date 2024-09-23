@@ -4,7 +4,7 @@ id: "index"
 title: "Home"
 ---
 
-import Card from '@site/src/components/card.tsx';
+import {Card, CardGroup} from '@site/src/components/card.tsx';
 
 # Introduction
 
@@ -18,5 +18,10 @@ References:
 * [Configuration](./config)
 
 ## Features
-
-<Card icon="fa-file" title="File Previews" description="Preview widgets let you view markdown, images, video, CSVs, and more inline" />
+<CardGroup>
+	<Card href="features/preview" icon="fa-file" title="File Previews" description="Preview widgets let you view markdown, images, video, CSVs, and more inline." />
+	<Card href="features/remotes" icon="fa-server" title="Reliable Remote Connections" description="Automatic reconnection, remote file previews, and more." />
+	<Card href="features/ai" icon="fa-sparkles" title="Integrated AI" description="Inline AI Chat Windows hooked up to any LLM (local or remote)." />
+	<Card href="features/browser" icon="fa-globe" title="Inline Web Browser" description="Access online content without switching context." />
+	<Card href="features/charts" icon="fa-chart-simple" title="Data Visualization" description="Create graphs of system stats or custom data piped directly from CLI programs." />
+</CardGroup>

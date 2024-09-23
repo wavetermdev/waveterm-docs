@@ -27,6 +27,11 @@ const sidebars: SidebarsConfig = {
             id: "wsh",
             label: "Wsh",
         },
+        {
+            type: "doc",
+            id: "widgets",
+            label: "Widgets",
+        },
     ],
 };
 

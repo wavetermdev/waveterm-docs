@@ -18,7 +18,7 @@
 
     border: 2px solid var(--ifm-color-primary-lightest);
     transition: transform 0.1s ease;
-    transform-origin: 0% 0;
+    transform-origin: 50% 50%;
 }
 
 .card:hover {

@@ -12,8 +12,8 @@ export function Card({ icon, title, description, href }: CardProps) {
     return (
         <a className="card" href={href}>
             <div className={clsx("icon", "fa-sharp fa-regular", icon)} />
-            <h2 className="title">{title}</h2>
-            <p className="description">{description}</p>
+            <div className="title">{title}</div>
+            <div className="description">{description}</div>
         </a>
     );
 }

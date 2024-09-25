@@ -28,10 +28,10 @@ use ":" as level separators.
 | web:defaulturl | string | default web page to open in the web widget when no url is provided (homepage) |
 | web:defaultsearch | string | search template for web searches.  e.g. `https://www.google.com/search?q={query}`.  "\{query}" gets replaced by search term |
 | blockheader:showblockids | bool | show first 8 chars of blockid in the header |
-| autoupdate:enabled | bool | enable/disable checking for updates |
-| autoupdate:intervalms | float64 | time in milliseconds to wait between update checks |
-| autoupdate:installonquit | bool | whether to automatically install updates on quit |
-| autoupdate:channel | string | the auto update channel "latest" (stable builds), or "beta" (updated more frequently) |
+| autoupdate:enabled | bool | enable/disable checking for updates (requires app restart) |
+| autoupdate:intervalms | float64 | time in milliseconds to wait between update checks (requires app restart) |
+| autoupdate:installonquit | bool | whether to automatically install updates on quit (requires app restart) |
+| autoupdate:channel | string | the auto update channel "latest" (stable builds), or "beta" (updated more frequently) (requires app restart) |
 | widget:showhelp | bool | whether to show help/tips widgets in right sidebar |
 | window:transparent | bool | set to true to enable window transparency (on platform where it is supported) |
 | window:blur | bool | set to enable window background blurring |
@@ -39,7 +39,8 @@ use ":" as level separators.
 | window:bgcolor | string | set the window background color (should be hex: #xxxxxx) |
 | window:reducedmotion | bool | set to true to disable most animations |
 | window:tilegapsize | int | set to change override default gap between blocks |
-| window:nativetitlebar | bool | set to use the OS-native title bar, rather than the overlay (Windows and Linux only) |
+| window:nativetitlebar | bool | set to use the OS-native title bar, rather than the overlay (Windows and Linux only, requires app restart) |
+| window:disablehardwareacceleration | bool | set to disable Chromium hardware acceleration to resolve graphical bugs (requires app restart) |
 | telemetry:enabled | bool | set to enable/disable telemetry |
 
 For reference this is the current default configuration (v0.8.3):

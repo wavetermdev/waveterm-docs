@@ -94,6 +94,22 @@ const config: Config = {
                 content:
                     "terminal, developer, development, command, line, wave, linux, macos, windows, connection, ssh, cli, waveterm, documentation, docs, ai, graphical, widgets, remote, open, source, open-source, go, golang, react, typescript, javascript",
             },
+            {
+                name: "og:type",
+                content: "website",
+            },
+            {
+                name: "og:site_name",
+                content: "Wave Terminal Documentation",
+            },
+            {
+                name: "application-name",
+                content: "Wave Terminal Documentation",
+            },
+            {
+                name: "apple-mobile-web-app-title",
+                content: "Wave Terminal Documentation",
+            },
         ],
         footer: {
             copyright: `Copyright © ${new Date().getFullYear()} Command Line Inc. Built with Docusaurus.`,

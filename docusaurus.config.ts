@@ -110,6 +110,15 @@ const config: Config = {
                 href: "/fontawesome/webfonts/fa-sharp-regular-400.woff2",
             },
         },
+        {
+            tagName: "link",
+            attributes: {
+                rel: "sitemap",
+                type: "application/xml",
+                title: "Sitemap",
+                href: "/sitemap.xml",
+            },
+        },
     ],
     stylesheets: ["/fontawesome/css/fontawesome.min.css", "/fontawesome/css/sharp-regular.min.css"],
     staticDirectories: ["static"],

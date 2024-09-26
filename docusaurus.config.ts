@@ -37,6 +37,15 @@ const config: Config = {
             } as import("@docusaurus/plugin-content-docs").Options,
         ],
         "ideal-image",
+        [
+            "@docusaurus/plugin-sitemap",
+            {
+                lastmod: "date",
+                changefreq: "daily",
+                priority: 0.5,
+                filename: "sitemap.xml",
+            },
+        ],
     ],
     themes: [["classic", { customCss: "src/css/custom.css" }]],
     themeConfig: {

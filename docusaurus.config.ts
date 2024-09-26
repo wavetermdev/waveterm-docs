@@ -99,6 +99,18 @@ const config: Config = {
             copyright: `Copyright © ${new Date().getFullYear()} Command Line Inc. Built with Docusaurus.`,
         },
     },
+    headTags: [
+        {
+            tagName: "link",
+            attributes: {
+                rel: "preload",
+                as: "font",
+                type: "font/woff2",
+                "data-next-font": "size-adjust",
+                href: "/fontawesome/webfonts/fa-sharp-regular-400.woff2",
+            },
+        },
+    ],
     stylesheets: ["/fontawesome/css/fontawesome.min.css", "/fontawesome/css/sharp-regular.min.css"],
     staticDirectories: ["static"],
 };

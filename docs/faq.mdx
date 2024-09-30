@@ -1,0 +1,44 @@
+---
+sidebar_position: 7
+id: "faq"
+title: "FAQ"
+---
+
+# FAQ
+
+### How do I set up my own LLM?
+
+You must manually edit the [config file](./config) located at `~/.waveterm/config/settings.json`.
+
+| Key Name | Type | Function |
+|----------|------|----------|
+| ai:baseurl | string | Set the AI Base Url (must be OpenAI compatible) |
+| ai:apitoken | string | your AI api token |
+| ai:name | string | string to display in the Wave AI block header |
+| ai:model | string | model name to pass to API |
+| ai:maxtokens | int | max tokens to pass to API |
+| ai:timeoutms | int | timeout (in milliseconds) for AI calls |
+
+Here's an example of pointing it to a local Ollama instance.  Note that to get the text in the header of the AI block
+to update, you'll need to set the "ai:name" key.  For ollama, you'll also need to provide something for the
+apitoken (even though it is ignored).
+
+Here are the ollma open AI compatibility docs: https://github.com/ollama/ollama/blob/main/docs/openai.md
+
+```json
+{
+	"ai:baseurl": "http://localhost:11434/v1",
+	"ai:name": "llama3.2",
+	"ai:model": "llama3.2",
+	"ai:apitoken": "ollama"
+}
+```
+
+### How can I see the block numbers?
+
+The block numbers will appear when you hold down Ctrl-Shift (and disappear once you release the key combo).
+
+### How do I make a remote connection?
+
+There is a button in the header.  Click the <i className="fa-sharp fa-laptop"/> or <i className="fa-sharp fa-arrow-right-arrow-left"/>
+and type the `[user]@[host]` that you wish to connect to.

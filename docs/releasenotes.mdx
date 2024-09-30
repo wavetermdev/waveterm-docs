@@ -6,6 +6,24 @@ sidebar_position: 8
 
 # Release Notes
 
+### v0.8.7 &mdash; Sep 30, 2024
+
+Quick patch release to fix bugs:
+
+* Fixes windows SSH connections (invalid path while trying to install wsh tools)
+* Fixes an issue resolving `~` in windows paths `~\` now works instead of just `~/`
+* Tries to fix background color for webpages.  Pulls meta tag for color-scheme, and sets a black background if dark detected (fixes issue rendering raw githubusercontent files)
+* Fixed our useDimensions hook to fire correctly. Fixes some sizing issues including allowing error messages to show consistently when SSH connections fail.
+* Allow "data:" urls in custom tab backgrounds
+* All the alias "tab" for the current tab's UUID when using wsh
+* [BUILD] conditional write generated files only if they are updated
+
+### v0.8.6 &mdash; Sep 26, 2024
+
+Another quick hotfix update. Fixes an issue where, if you deleted all of the tabs in a window, the window would be restored on next startup as completely blank.
+
+Also, as a bonus, we added fish shell support!
+
 ### v0.8.5 &mdash; Sep 25, 2024
 
 Hot fix, dowgrade `jotai` library.  Upgrading caused a major regression in codeedit which did not allow

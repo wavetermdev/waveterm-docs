@@ -32,6 +32,11 @@ const sidebars: SidebarsConfig = {
             id: "widgets",
             label: "Widgets",
         },
+        {
+            type: "doc",
+            id: "faq",
+            label: "FAQ",
+        },
     ],
 };
 

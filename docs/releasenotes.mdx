@@ -1,0 +1,48 @@
+---
+id: "releasenotes"
+title: "Release Notes"
+sidebar_position: 8
+---
+
+# Release Notes
+
+### v0.8.5 &mdash; Sep 25, 2024
+
+Hot fix, dowgrade `jotai` library.  Upgrading caused a major regression in codeedit which did not allow
+users to edit files.
+
+### v0.8.4 &mdash; Sep 25, 2024
+
+* Added a setting `window:disablehardwareacceleration` to disable native hardware acceleration
+* New startup model for legacy users given them the option to download the WaveLegacy
+* Use WAVETERM_HOME for the home directory consistently
+
+### v0.8.3 &mdash; Sep 25, 2024
+
+More hotfixes for Linux users.  We now link against an older version of glibc and use
+the zig compiler on linux (the newer version caused us not to run on older distros).  
+Also fixes a permissions issue when installing via .deb.  There is also a new config value
+`window:nativetitlebar` which restores the native titlebar on windows/linux.
+
+
+### v0.8.2 &mdash; Sep 24, 2024
+
+Hot fix, fixes a nasty crash on startup for Linux users (dynamic linking but with netcgo DNS library)
+
+### v0.8.1 &mdash; Sep 23, 2024
+
+Minor cleanup release.
+
+* fix number parsing for certain config file values
+* add link to docs site
+* add new back button for directory view
+* telemetry fixes
+
+### v0.8.0 &mdash; Sep 20, 2024
+
+**Major New Relase of Wave Terminal**
+
+The new build is a fresh start, and a clean break from the current version. As such, your history, settings, and configuration will not be carried over. If you'd like to continue to run the legacy version, you will need to download it separately.
+
+
+Release Artificats and source code diffs can be found on (Github)[https://github.com/wavetermdev/waveterm].

@@ -47,7 +47,10 @@ const config: Config = {
             },
         ],
     ],
-    themes: [["classic", { customCss: "src/css/custom.css" }], "@docusaurus/theme-search-algolia"],
+    themes: [
+        ["classic", { customCss: "src/css/custom.css" }],
+        !process.env.DISABLE_ALGOLIA ? "@docusaurus/theme-search-algolia" : undefined,
+    ].filter((v) => v),
     themeConfig: {
         docs: {
             sidebar: {

@@ -4,7 +4,8 @@
     "scripts": {
         "docusaurus": "docusaurus",
         "start": "docusaurus start",
-        "build": "docusaurus build --no-minify",
+        "build": "USE_SIMPLE_CSS_MINIFIER=true docusaurus build",
+        "build-local": "DISABLE_ALGOLIA=true run build",
         "swizzle": "docusaurus swizzle",
         "deploy": "docusaurus deploy",
         "clear": "docusaurus clear",

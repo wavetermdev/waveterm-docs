@@ -47,7 +47,7 @@ const config: Config = {
             },
         ],
     ],
-    themes: [["classic", { customCss: "src/css/custom.css" }]],
+    themes: [["classic", { customCss: "src/css/custom.css" }], "@docusaurus/theme-search-algolia"],
     themeConfig: {
         docs: {
             sidebar: {
@@ -113,6 +113,11 @@ const config: Config = {
         ],
         footer: {
             copyright: `Copyright © ${new Date().getFullYear()} Command Line Inc. Built with Docusaurus.`,
+        },
+        algolia: {
+            appId: "B6A8512SN4",
+            apiKey: "e879cd8663f109b2822cd004d9cd468c",
+            indexName: "waveterm",
         },
     },
     headTags: [

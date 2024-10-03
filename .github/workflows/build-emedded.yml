@@ -1,4 +1,4 @@
-name: Build static site package
+name: Build embedded docsite
 
 env:
     NODE_VERSION: 20
@@ -8,8 +8,8 @@ on:
         branches: [main]
 
 jobs:
-    build-static:
-        name: Build static site
+    build-embedded:
+        name: Build embedded site
         runs-on: ubuntu-latest
         steps:
             - uses: actions/checkout@v4
@@ -22,10 +22,10 @@ jobs:
               run: |
                   corepack enable
                   yarn install
-            - name: Build static site
+            - name: Build embedded site
               run: DISABLE_ALGOLIA=1 yarn build
-            - name: Upload static site artifact
+            - name: Upload embedded site artifact
               uses: actions/upload-artifact@v4
               with:
-                  name: static-site
+                  name: embedded-site
                   path: build

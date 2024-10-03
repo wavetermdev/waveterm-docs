@@ -9,7 +9,7 @@ const config: Config = {
     url: "https://docs.waveterm.dev/",
     // Set the /<baseUrl>/ pathname under which your site is served
     // For GitHub pages deployment, it is often '/<projectName>/'
-    baseUrl: process.env.LOCAL_SITE ? "/docsite/" : "/",
+    baseUrl: process.env.EMBEDDED ? "/docsite/" : "/",
 
     // GitHub pages deployment config.
     // If you aren't using GitHub pages, you don't need these.
@@ -49,7 +49,7 @@ const config: Config = {
     ],
     themes: [
         ["classic", { customCss: "src/css/custom.css" }],
-        !process.env.LOCAL_SITE ? "@docusaurus/theme-search-algolia" : undefined,
+        !process.env.EMBEDDED ? "@docusaurus/theme-search-algolia" : undefined,
     ].filter((v) => v),
     themeConfig: {
         docs: {
@@ -77,7 +77,7 @@ const config: Config = {
                     docId: "index",
                     label: "Docs",
                 },
-                !process.env.LOCAL_SITE
+                !process.env.EMBEDDED
                     ? [
                           {
                               href: "https://discord.gg/zUeP2aAjaP",

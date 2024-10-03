@@ -9,7 +9,7 @@ const config: Config = {
     url: "https://docs.waveterm.dev/",
     // Set the /<baseUrl>/ pathname under which your site is served
     // For GitHub pages deployment, it is often '/<projectName>/'
-    baseUrl: "/",
+    baseUrl: process.env.LOCAL_SITE ? "/docsite/" : "/",
 
     // GitHub pages deployment config.
     // If you aren't using GitHub pages, you don't need these.
@@ -49,7 +49,7 @@ const config: Config = {
     ],
     themes: [
         ["classic", { customCss: "src/css/custom.css" }],
-        !process.env.DISABLE_ALGOLIA ? "@docusaurus/theme-search-algolia" : undefined,
+        !process.env.LOCAL_SITE ? "@docusaurus/theme-search-algolia" : undefined,
     ].filter((v) => v),
     themeConfig: {
         docs: {
@@ -77,19 +77,23 @@ const config: Config = {
                     docId: "index",
                     label: "Docs",
                 },
-                {
-                    href: "https://discord.gg/zUeP2aAjaP",
-                    position: "right",
-                    className: "header-link-custom custom-icon-discord",
-                    "aria-label": "Discord invite",
-                },
-                {
-                    href: "https://github.com/wavetermdev/waveterm",
-                    position: "right",
-                    className: "header-link-custom custom-icon-github",
-                    "aria-label": "GitHub repository",
-                },
-            ],
+                !process.env.LOCAL_SITE
+                    ? [
+                          {
+                              href: "https://discord.gg/zUeP2aAjaP",
+                              position: "right",
+                              className: "header-link-custom custom-icon-discord",
+                              "aria-label": "Discord invite",
+                          },
+                          {
+                              href: "https://github.com/wavetermdev/waveterm",
+                              position: "right",
+                              className: "header-link-custom custom-icon-github",
+                              "aria-label": "GitHub repository",
+                          },
+                      ]
+                    : [],
+            ].flat(),
         },
         metadata: [
             {

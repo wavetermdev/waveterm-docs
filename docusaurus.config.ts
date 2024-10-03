@@ -1,5 +1,7 @@
 import type { Config } from "@docusaurus/types";
 
+const baseUrl = process.env.EMBEDDED ? "/docsite/" : "/";
+
 const config: Config = {
     title: "Wave Terminal Documentation",
     tagline: "Level Up Your Terminal With Graphical Widgets",
@@ -9,7 +11,7 @@ const config: Config = {
     url: "https://docs.waveterm.dev/",
     // Set the /<baseUrl>/ pathname under which your site is served
     // For GitHub pages deployment, it is often '/<projectName>/'
-    baseUrl: process.env.EMBEDDED ? "/docsite/" : "/",
+    baseUrl,
 
     // GitHub pages deployment config.
     // If you aren't using GitHub pages, you don't need these.
@@ -135,7 +137,7 @@ const config: Config = {
                 as: "font",
                 type: "font/woff2",
                 "data-next-font": "size-adjust",
-                href: "/fontawesome/webfonts/fa-sharp-regular-400.woff2",
+                href: `${baseUrl}fontawesome/webfonts/fa-sharp-regular-400.woff2`,
             },
         },
         {
@@ -144,11 +146,11 @@ const config: Config = {
                 rel: "sitemap",
                 type: "application/xml",
                 title: "Sitemap",
-                href: "/sitemap.xml",
+                href: `${baseUrl}sitemap.xml`,
             },
         },
     ],
-    stylesheets: ["/fontawesome/css/fontawesome.min.css", "/fontawesome/css/sharp-regular.min.css"],
+    stylesheets: [`${baseUrl}fontawesome/css/fontawesome.min.css`, `${baseUrl}fontawesome/css/sharp-regular.min.css`],
     staticDirectories: ["static"],
 };
 

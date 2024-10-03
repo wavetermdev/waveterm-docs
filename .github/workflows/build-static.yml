@@ -1,0 +1,31 @@
+name: Build static site package
+
+env:
+    NODE_VERSION: 20
+
+on:
+    push:
+        branches: [main]
+
+jobs:
+    build-static:
+        name: Build static site
+        runs-on: ubuntu-latest
+        steps:
+            - uses: actions/checkout@v4
+              with:
+                  fetch-depth: 0
+            - uses: actions/setup-node@v4
+              with:
+                  node-version: ${{env.NODE_VERSION}}
+            - name: Install yarn
+              run: |
+                  corepack enable
+                  yarn install
+            - name: Build static site
+              run: DISABLE_ALGOLIA=1 yarn build
+            - name: Upload static site artifact
+              uses: actions/upload-artifact@v4
+              with:
+                  name: static-site
+                  path: build

@@ -23,7 +23,7 @@ jobs:
                   corepack enable
                   yarn install
             - name: Build embedded site
-              run: DISABLE_ALGOLIA=1 yarn build
+              run: EMBEDDED=1 yarn build
             - name: Upload embedded site artifact
               uses: actions/upload-artifact@v4
               with:

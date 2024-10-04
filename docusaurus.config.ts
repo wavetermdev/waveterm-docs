@@ -42,16 +42,14 @@ const config: Config = {
         [
             "@docusaurus/plugin-sitemap",
             {
-                lastmod: "date",
                 changefreq: "daily",
-                priority: 0.5,
                 filename: "sitemap.xml",
             },
         ],
     ],
     themes: [
         ["classic", { customCss: "src/css/custom.css" }],
-        !process.env.EMBEDDED ? "@docusaurus/theme-search-algolia" : undefined,
+        !process.env.EMBEDDED && "@docusaurus/theme-search-algolia",
     ].filter((v) => v),
     themeConfig: {
         docs: {
@@ -149,7 +147,15 @@ const config: Config = {
                 href: `${baseUrl}sitemap.xml`,
             },
         },
-    ],
+        !process.env.EMBEDDED && {
+            tagName: "script",
+            attributes: {
+                defer: "true",
+                "data-domain": "waveterm.dev",
+                src: "https://plausible.io/js/script.file-downloads.outbound-links.tagged-events.js",
+            },
+        },
+    ].filter((v) => v),
     stylesheets: [`${baseUrl}fontawesome/css/fontawesome.min.css`, `${baseUrl}fontawesome/css/sharp-regular.min.css`],
     staticDirectories: ["static"],
 };

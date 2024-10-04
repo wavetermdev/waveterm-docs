@@ -5,7 +5,7 @@
         "docusaurus": "docusaurus",
         "start": "docusaurus start",
         "build": "USE_SIMPLE_CSS_MINIFIER=true docusaurus build",
-        "build-local": "DISABLE_ALGOLIA=true run build",
+        "build-local": "EMBEDDED=true run build",
         "swizzle": "docusaurus swizzle",
         "deploy": "docusaurus deploy",
         "clear": "docusaurus clear",

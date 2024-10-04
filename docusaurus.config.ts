@@ -1,5 +1,7 @@
 import type { Config } from "@docusaurus/types";
 
+const baseUrl = process.env.EMBEDDED ? "/docsite/" : "/";
+
 const config: Config = {
     title: "Wave Terminal Documentation",
     tagline: "Level Up Your Terminal With Graphical Widgets",
@@ -9,7 +11,7 @@ const config: Config = {
     url: "https://docs.waveterm.dev/",
     // Set the /<baseUrl>/ pathname under which your site is served
     // For GitHub pages deployment, it is often '/<projectName>/'
-    baseUrl: "/",
+    baseUrl,
 
     // GitHub pages deployment config.
     // If you aren't using GitHub pages, you don't need these.
@@ -49,7 +51,7 @@ const config: Config = {
     ],
     themes: [
         ["classic", { customCss: "src/css/custom.css" }],
-        !process.env.DISABLE_ALGOLIA ? "@docusaurus/theme-search-algolia" : undefined,
+        !process.env.EMBEDDED ? "@docusaurus/theme-search-algolia" : undefined,
     ].filter((v) => v),
     themeConfig: {
         docs: {
@@ -77,19 +79,23 @@ const config: Config = {
                     docId: "index",
                     label: "Docs",
                 },
-                {
-                    href: "https://discord.gg/zUeP2aAjaP",
-                    position: "right",
-                    className: "header-link-custom custom-icon-discord",
-                    "aria-label": "Discord invite",
-                },
-                {
-                    href: "https://github.com/wavetermdev/waveterm",
-                    position: "right",
-                    className: "header-link-custom custom-icon-github",
-                    "aria-label": "GitHub repository",
-                },
-            ],
+                !process.env.EMBEDDED
+                    ? [
+                          {
+                              href: "https://discord.gg/zUeP2aAjaP",
+                              position: "right",
+                              className: "header-link-custom custom-icon-discord",
+                              "aria-label": "Discord invite",
+                          },
+                          {
+                              href: "https://github.com/wavetermdev/waveterm",
+                              position: "right",
+                              className: "header-link-custom custom-icon-github",
+                              "aria-label": "GitHub repository",
+                          },
+                      ]
+                    : [],
+            ].flat(),
         },
         metadata: [
             {
@@ -131,7 +137,7 @@ const config: Config = {
                 as: "font",
                 type: "font/woff2",
                 "data-next-font": "size-adjust",
-                href: "/fontawesome/webfonts/fa-sharp-regular-400.woff2",
+                href: `${baseUrl}fontawesome/webfonts/fa-sharp-regular-400.woff2`,
             },
         },
         {
@@ -140,11 +146,11 @@ const config: Config = {
                 rel: "sitemap",
                 type: "application/xml",
                 title: "Sitemap",
-                href: "/sitemap.xml",
+                href: `${baseUrl}sitemap.xml`,
             },
         },
     ],
-    stylesheets: ["/fontawesome/css/fontawesome.min.css", "/fontawesome/css/sharp-regular.min.css"],
+    stylesheets: [`${baseUrl}fontawesome/css/fontawesome.min.css`, `${baseUrl}fontawesome/css/sharp-regular.min.css`],
     staticDirectories: ["static"],
 };
 

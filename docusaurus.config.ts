@@ -50,7 +50,6 @@ const config: Config = {
     themes: [
         ["classic", { customCss: "src/css/custom.css" }],
         !process.env.EMBEDDED && "@docusaurus/theme-search-algolia",
-        !process.env.EMBEDDED && "@stackql/docusaurus-plugin-structured-data",
     ].filter((v) => v),
     themeConfig: {
         docs: {
@@ -126,30 +125,6 @@ const config: Config = {
             appId: "B6A8512SN4",
             apiKey: "e879cd8663f109b2822cd004d9cd468c",
             indexName: "waveterm",
-        },
-        structuredData: {
-            authors: [],
-            verbose: true,
-            excludedRoutes: ["/blog"],
-            organization: {
-                sameAs: [
-                    "https://www.waveterm.dev",
-                    "https://x.com/wavetermdev",
-                    "https://www.linkedin.com/company/wavetermdev",
-                    "https://github.com/wavetermdev",
-                    "https://www.youtube.com/@wavetermdev",
-                ],
-                contactPoint: {
-                    "@type": "ContactPoint",
-                    email: "support@waveterm.dev",
-                },
-            },
-            webpage: {
-                inLanguage: "en-US",
-            },
-            website: {
-                inLanguage: "en-US",
-            },
         },
     },
     headTags: [

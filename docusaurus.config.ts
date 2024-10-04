@@ -42,16 +42,15 @@ const config: Config = {
         [
             "@docusaurus/plugin-sitemap",
             {
-                lastmod: "date",
                 changefreq: "daily",
-                priority: 0.5,
                 filename: "sitemap.xml",
             },
         ],
     ],
     themes: [
         ["classic", { customCss: "src/css/custom.css" }],
-        !process.env.EMBEDDED ? "@docusaurus/theme-search-algolia" : undefined,
+        !process.env.EMBEDDED && "@docusaurus/theme-search-algolia",
+        !process.env.EMBEDDED && "@stackql/docusaurus-plugin-structured-data",
     ].filter((v) => v),
     themeConfig: {
         docs: {
@@ -128,6 +127,30 @@ const config: Config = {
             apiKey: "e879cd8663f109b2822cd004d9cd468c",
             indexName: "waveterm",
         },
+        structuredData: {
+            authors: [],
+            verbose: true,
+            excludedRoutes: ["/blog"],
+            organization: {
+                sameAs: [
+                    "https://www.waveterm.dev",
+                    "https://x.com/wavetermdev",
+                    "https://www.linkedin.com/company/wavetermdev",
+                    "https://github.com/wavetermdev",
+                    "https://www.youtube.com/@wavetermdev",
+                ],
+                contactPoint: {
+                    "@type": "ContactPoint",
+                    email: "support@waveterm.dev",
+                },
+            },
+            webpage: {
+                inLanguage: "en-US",
+            },
+            website: {
+                inLanguage: "en-US",
+            },
+        },
     },
     headTags: [
         {
@@ -149,7 +172,15 @@ const config: Config = {
                 href: `${baseUrl}sitemap.xml`,
             },
         },
-    ],
+        !process.env.EMBEDDED && {
+            tagName: "script",
+            attributes: {
+                defer: "true",
+                "data-domain": "waveterm.dev",
+                src: "https://plausible.io/js/script.file-downloads.outbound-links.tagged-events.js",
+            },
+        },
+    ].filter((v) => v),
     stylesheets: [`${baseUrl}fontawesome/css/fontawesome.min.css`, `${baseUrl}fontawesome/css/sharp-regular.min.css`],
     staticDirectories: ["static"],
 };

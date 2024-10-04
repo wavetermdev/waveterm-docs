@@ -5,13 +5,13 @@
     gap: 1rem;
 }
 
-@media (max-width: 600px) {
+@media (max-width: 650px) {
     .card-group {
         grid-template-columns: 1fr;
     }
 }
 
-@media (600px < width <= 800px) {
+@media (996px < width <= 1170px) {
     .card-group {
         grid-template-columns: repeat(2, 1fr);
     }

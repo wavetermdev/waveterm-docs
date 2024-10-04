@@ -151,7 +151,7 @@ const config: Config = {
             tagName: "script",
             attributes: {
                 defer: "true",
-                "data-domain": "waveterm.dev",
+                "data-domain": "docs.waveterm.dev",
                 src: "https://plausible.io/js/script.file-downloads.outbound-links.tagged-events.js",
             },
         },

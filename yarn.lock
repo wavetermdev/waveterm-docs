@@ -13623,9 +13623,9 @@ __metadata:
   languageName: node
   linkType: hard
 
-"waveterm-docs-new@workspace:.":
+"waveterm-docs@workspace:.":
   version: 0.0.0-use.local
-  resolution: "waveterm-docs-new@workspace:."
+  resolution: "waveterm-docs@workspace:."
   dependencies:
     "@docusaurus/core": "npm:3.5.2"
     "@docusaurus/module-type-aliases": "npm:3.5.2"

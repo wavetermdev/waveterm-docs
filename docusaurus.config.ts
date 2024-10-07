@@ -16,7 +16,7 @@ const config: Config = {
     // GitHub pages deployment config.
     // If you aren't using GitHub pages, you don't need these.
     organizationName: "wavetermdev", // Usually your GitHub org/user name.
-    projectName: "waveterm-docs-new", // Usually your repo name.
+    projectName: "waveterm-docs", // Usually your repo name.
     deploymentBranch: "main",
 
     onBrokenLinks: "throw",
@@ -36,6 +36,9 @@ const config: Config = {
             {
                 path: "docs",
                 routeBasePath: "/",
+                editUrl: !process.env.EMBEDDED
+                    ? "https://github.com/wavetermdev/waveterm-docs/edit/main/docs/"
+                    : undefined,
             } as import("@docusaurus/plugin-content-docs").Options,
         ],
         "ideal-image",

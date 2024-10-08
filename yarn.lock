@@ -3097,15 +3097,6 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@types/brotli@npm:^1":
-  version: 1.3.4
-  resolution: "@types/brotli@npm:1.3.4"
-  dependencies:
-    "@types/node": "npm:*"
-  checksum: 10c0/b13829301b3ee79250d3fa8b1973097837bdd040fb90c90f63f406385e62b8e06e72a41e77939c6f8118090a7c72215b0d7b4d83b1e69457616810a65a576339
-  languageName: node
-  linkType: hard
-
 "@types/concat-stream@npm:^2.0.0":
   version: 2.0.3
   resolution: "@types/concat-stream@npm:2.0.3"
@@ -3362,13 +3353,6 @@ __metadata:
   dependencies:
     undici-types: "npm:~6.19.2"
   checksum: 10c0/6af7994129815010bcbc4cf8221865559c8116ff43e74a6549525c2108267596fc2d18aff5d5ecfe089fb60a119f975631343e2c65c52bfa0955ed9dc56733d6
-  languageName: node
-  linkType: hard
-
-"@types/opentype.js@npm:^1":
-  version: 1.3.8
-  resolution: "@types/opentype.js@npm:1.3.8"
-  checksum: 10c0/6c1ad2e3225132b1c59dd709fb5aed184424a589299a2112c48471099f5240d1ecf0efc68ca78ec3511df8d96b30171007d6589f90a086da703a60123f7e06d6
   languageName: node
   linkType: hard
 
@@ -13983,10 +13967,8 @@ __metadata:
     "@eslint/js": "npm:^9.11.1"
     "@mdx-js/react": "npm:^3.0.0"
     "@mdx-js/typescript-plugin": "npm:^0.0.6"
-    "@types/brotli": "npm:^1"
     "@types/eslint": "npm:^9.6.1"
     "@types/eslint-config-prettier": "npm:^6.11.3"
-    "@types/opentype.js": "npm:^1"
     "@waveterm/docusaurus-og": "https://github.com/wavetermdev/docusaurus-og"
     clsx: "npm:^2.1.1"
     eslint: "npm:^9.11.1"

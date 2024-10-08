@@ -81,10 +81,7 @@ export const docOgRenderer: ImageRenderer<DocsPageData> = async (data, context) 
         React.createElement(titleElement, null, data.metadata.title),
         React.createElement("div", null, data.metadata.description.replace("&mdash;", "-")),
         waveLogoElement,
-        headerElement(
-            context.siteConfig.title,
-            React.createElement("path", readFileSync(join(__dirname, "../../static/img/book-open-cover-solid.svg")))
-        )
+        headerElement(context.siteConfig.title, null)
     );
 
     return [element, await imageGeneratorOptions()];
@@ -118,16 +115,6 @@ function docSectionPath(slug: string, title: string) {
     section = section.charAt(0).toUpperCase() + section.slice(1);
 
     return `${title} / ${section}`;
-}
-
-async function encodeRemoteImage(url: string): Promise<string> {
-    try {
-        const res = await fetch(url);
-        const buffer = await res.arrayBuffer().then((buf) => Buffer.from(buf));
-        return `data:${res.headers.get("content-type")};base64,${buffer.toString("base64")}`;
-    } catch (error) {
-        return waveLogoBase64;
-    }
 }
 
 async function getTtfFont(family: string, axes: string[], value: number[]): Promise<ArrayBuffer> {

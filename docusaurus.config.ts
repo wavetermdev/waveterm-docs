@@ -1,4 +1,5 @@
 import type { Config } from "@docusaurus/types";
+import { docOgRenderer } from "./src/renderer/image-renderers";
 
 const baseUrl = process.env.EMBEDDED ? "/docsite/" : "/";
 
@@ -47,7 +48,16 @@ const config: Config = {
                 filename: "sitemap.xml",
             },
         ],
-    ],
+        !process.env.EMBEDDED && [
+            "@waveterm/docusaurus-og",
+            {
+                path: "./preview-images", // relative to the build directory
+                imageRenderers: {
+                    "docusaurus-plugin-content-docs": docOgRenderer,
+                },
+            },
+        ],
+    ].filter((v) => v),
     themes: [
         ["classic", { customCss: "src/css/custom.css" }],
         !process.env.EMBEDDED && "@docusaurus/theme-search-algolia",

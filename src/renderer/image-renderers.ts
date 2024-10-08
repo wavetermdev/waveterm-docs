@@ -25,9 +25,6 @@ const titleElement = ({ children }) =>
 const waveLogoElement = React.createElement("img", {
     src: waveLogoBase64,
     style: {
-        position: "absolute",
-        top: 20,
-        right: 20,
         width: 300,
     },
 });
@@ -39,9 +36,7 @@ const headerElement = (header: string, svg: ReactNode) =>
             style: {
                 display: "flex",
                 alignItems: "center",
-                position: "absolute",
-                top: 20,
-                left: 40,
+                marginTop: "85px",
             },
         },
         svg,
@@ -49,10 +44,10 @@ const headerElement = (header: string, svg: ReactNode) =>
             "label",
             {
                 style: {
-                    fontSize: 50,
+                    fontSize: 30,
                     fontWeight: 600,
                     letterSpacing: 1,
-                    color: "#e3e3e3",
+                    color: "#58c142",
                 },
             },
             header
@@ -64,7 +59,7 @@ const rootDivStyle: React.CSSProperties = {
     flexDirection: "column",
     height: "100%",
     width: "100%",
-    padding: "10px 40px",
+    padding: "50px 50px",
     justifyContent: "center",
     fontFamily: "Roboto",
     fontSize: 32,
@@ -72,16 +67,36 @@ const rootDivStyle: React.CSSProperties = {
     backgroundColor: "#1b1b1d",
     color: "#e3e3e3",
     borderBottom: "2rem solid #58c142",
+    zIndex: "2 !important",
 };
+
+const bookIcon = join(__dirname, "../../static/img/book-open-cover-regular.svg");
+const bookIconBase64 = `data:image/svg+xml;base64,${readFileSync(bookIcon).toString("base64")}`;
+console.log(bookIconBase64);
+const bookIconElement = React.createElement("div", {
+    style: {
+        content: '""',
+        position: "absolute",
+        bottom: "-100px",
+        right: "-100px",
+        backgroundColor: "#58c142bb",
+        width: "500px",
+        height: "500px",
+        zIndex: "1 !important",
+        mask: `url(${bookIcon}) no-repeat center`,
+        "-webkit-mask": `url(${bookIcon}) no-repeat center`,
+    },
+});
 
 export const docOgRenderer: ImageRenderer<DocsPageData> = async (data, context) => {
     const element = React.createElement(
         "div",
         { style: rootDivStyle },
+        waveLogoElement,
+        headerElement("Documentation", null),
         React.createElement(titleElement, null, data.metadata.title),
         React.createElement("div", null, data.metadata.description.replace("&mdash;", "-")),
-        waveLogoElement,
-        headerElement(context.siteConfig.title, null)
+        bookIconElement
     );
 
     return [element, await imageGeneratorOptions()];

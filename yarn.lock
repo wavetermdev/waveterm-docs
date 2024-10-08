@@ -3732,7 +3732,7 @@ __metadata:
 
 "@waveterm/docusaurus-og@https://github.com/wavetermdev/docusaurus-og":
   version: 1.0.0-alpha.132
-  resolution: "@waveterm/docusaurus-og@https://github.com/wavetermdev/docusaurus-og.git#commit=a0acc8a835ad0f0fe6d65fb101f09692955ca955"
+  resolution: "@waveterm/docusaurus-og@https://github.com/wavetermdev/docusaurus-og.git#commit=1cc17b16b5cba9ce1a4e4634877f4bea42da9824"
   dependencies:
     "@docusaurus/core": "npm:^3.4.0"
     "@docusaurus/module-type-aliases": "npm:^3.4.0"
@@ -3748,7 +3748,7 @@ __metadata:
     node-html-parser: "npm:^6.1.5"
     object-hash: "npm:^3.0.0"
     satori: "npm:^0.10.13"
-  checksum: 10c0/7ffecc039c88652d95803945e6a2e155787f3e9116e22aa0eafb61fbc0920735167bf91647b83e229554de6382a1dba3f4c5e61474b3ef07f3c85e661c16c24a
+  checksum: 10c0/1b67f2464bde5821c5eb475a5be572d2a7601dbc1a832ccf9817cbacdbfc4da87bdc22813eb4d6119707b0b9c117f035f18bbb7e39d79fbd588283b4175e0d34
   languageName: node
   linkType: hard
 

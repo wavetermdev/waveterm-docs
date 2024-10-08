@@ -23,6 +23,7 @@
         "@docusaurus/theme-classic": "^3.5.2",
         "@docusaurus/theme-search-algolia": "^3.5.2",
         "@mdx-js/react": "^3.0.0",
+        "@waveterm/docusaurus-og": "https://github.com/wavetermdev/docusaurus-og",
         "clsx": "^2.1.1",
         "prism-react-renderer": "^2.3.0",
         "react": "^18.0.0",

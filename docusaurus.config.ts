@@ -37,6 +37,7 @@ const config: Config = {
             {
                 path: "docs",
                 routeBasePath: "/",
+                exclude: ["features/**"],
                 editUrl: !process.env.EMBEDDED ? "https://github.com/wavetermdev/waveterm-docs/edit/main/" : undefined,
             } as import("@docusaurus/plugin-content-docs").Options,
         ],

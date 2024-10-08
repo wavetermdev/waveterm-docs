@@ -36,7 +36,7 @@ const headerElement = (header: string, svg: ReactNode) =>
             style: {
                 display: "flex",
                 alignItems: "center",
-                marginTop: "85px",
+                marginTop: "50px",
             },
         },
         svg,
@@ -70,24 +70,6 @@ const rootDivStyle: React.CSSProperties = {
     zIndex: "2 !important",
 };
 
-const bookIcon = join(__dirname, "../../static/img/book-open-cover-regular.svg");
-const bookIconBase64 = `data:image/svg+xml;base64,${readFileSync(bookIcon).toString("base64")}`;
-console.log(bookIconBase64);
-const bookIconElement = React.createElement("div", {
-    style: {
-        content: '""',
-        position: "absolute",
-        bottom: "-100px",
-        right: "-100px",
-        backgroundColor: "#58c142bb",
-        width: "500px",
-        height: "500px",
-        zIndex: "1 !important",
-        mask: `url(${bookIcon}) no-repeat center`,
-        "-webkit-mask": `url(${bookIcon}) no-repeat center`,
-    },
-});
-
 export const docOgRenderer: ImageRenderer<DocsPageData> = async (data, context) => {
     const element = React.createElement(
         "div",
@@ -95,8 +77,7 @@ export const docOgRenderer: ImageRenderer<DocsPageData> = async (data, context) 
         waveLogoElement,
         headerElement("Documentation", null),
         React.createElement(titleElement, null, data.metadata.title),
-        React.createElement("div", null, data.metadata.description.replace("&mdash;", "-")),
-        bookIconElement
+        React.createElement("div", null, data.metadata.description.replace("&mdash;", "-"))
     );
 
     return [element, await imageGeneratorOptions()];

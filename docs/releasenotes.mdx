@@ -6,6 +6,33 @@ sidebar_position: 8
 
 # Release Notes
 
+### v0.8.9 &mdash; Oct 8, 2024
+
+Lots of bug fixes and new features!
+
+* New "help" view -- uses an embedded version of our doc site -- https://docs.waveterm.dev
+* [breaking] wsh getmeta, wsh setmeta, and wsh deleteblock now take a blockid using a `-b` parameter instead of as a positional parameter
+* allow metadata to override the block icon, header, and text (frame:title, frame:icon, and frame:text)
+* checkpoint the terminal less often to reduce frequency of output bug (still working on a full fix)
+* new terminal themes -- Warm Yellow, and One Dark Pro
+* we now support github flavored markdown alerts
+* `wsh notify` command to send a desktop notification
+* `wsh createblock` to create any block via the CLI
+* right click to "Save Image" in webview
+* `wsh edit` will now allow you to open new files (as long as the parent directly exists)
+* added 8 new fun tab background presets (right click on any tab and select "Backgrounds" to try them out)
+* [config] new config key "term:scrollback" to set the number of lines of scrollback for terminals.  Use "-1" to set 0, max is 10000.
+* [config] new config key "term:theme" to set the default terminal theme for all new terminals
+* [config] new config key "preview:showhiddenfiles" to set the default "show hidden files" setting for preview
+* [bugfix] fixed an formatting issue with `wsh getmeta`
+* [bugfix] fix for startup issue on Linux when home directory is an NFS mount
+* [bugfix] fix cursor color in terminal themes to work
+* [bugfix] fix some double scrollbars when showing markdown content
+* [bugfix] improved shutdown sequence to better capture wavesrv logs
+* [bugfix] fix Alt+G keyboard accelerator for Linux/Windows
+* other assorted bug fixes, cleanups, and security fixes
+
+
 ### v0.8.8 &mdash; Oct 1, 2024
 
 Quick patch release to fix Windows/Linux "Alt" keybindings.  Also brings a huge performance improvement to AI streaming speed.

@@ -36,10 +36,18 @@ This will open up codeedit for the specified file.  This is useful for quickly e
 You can view the metadata of any block by running:
 
 ```
-wsh getmeta [blockid]
+wsh getmeta -b [blockid]
 ```
 
 This is especially useful for preview and web blocks as you can see the file or url that they are pointing to and use that in your CLI scripts.
+
+blockid format:
+
+* this -- the current block (this is also the default)
+* tab -- the id of the current tab
+* d6ff4966-231a-4074-b78a-20acc7226b41 -- a full blockid is a UUID
+* a67f55a3 -- blockids may be truncated to the first 8 characters
+* 5 -- if a number less than 100 is given, it is a block number.  blocks are numbered sequentially in the current tab from the top-left to bottom-right.  holding Ctrl:Shift will show a block number overlay.
 
 ---
 
@@ -48,12 +56,12 @@ This is especially useful for preview and web blocks as you can see the file or 
 You can update any metadata key value pair for blocks (and tabs) by using the setmeta command:
 
 ```
-wsh setmeta [blockid] [key]=[value]
-wsh setmeta [blockid] file=~/myfile.txt
-wsh setmeta [blockid] url=https://waveterm.dev/
+wsh setmeta -b [blockid] [key]=[value]
+wsh setmeta -b [blockid] file=~/myfile.txt
+wsh setmeta -b [blockid] url=https://waveterm.dev/
 ```
 
-You can get block and tab ids by right clicking on the appropriate block and selecting "Copy BlockId".  When you
+You can get block and tab ids by right clicking on the appropriate block and selecting "Copy BlockId" (or use the block number via Ctrl:Shift).  When you
 update the metadata for a preview or web block you'll see the changes reflected instantly in the block.
 
 Other useful metadata values to override block titles, icons, colors, themes, etc.
@@ -63,7 +71,7 @@ Other useful metadata values to override block titles, icons, colors, themes, et
 ## deleteblock
 
 ```
-wsh deleteblock [blockid]
+wsh deleteblock -b [blockid]
 ```
 
 This will delete the block with the specified id.

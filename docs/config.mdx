@@ -15,8 +15,11 @@ use ":" as level separators.
 |----------|------|----------|
 | ai:baseurl | string | Set the AI Base Url (must be OpenAI compatible) |
 | ai:apitoken | string | your AI api token |
+| ai:apitype | string | defaults to "open_ai", but can also set to "azure" for special Azure AI handling |
 | ai:name | string | string to display in the Wave AI block header |
 | ai:model | string | model name to pass to API |
+| ai:apiversion | string | for Azure AI only (when apitype is "azure", this will default to "2023-05-15") |
+| ai:orgid | string ||
 | ai:maxtokens | int | max tokens to pass to API |
 | ai:timeoutms | int | timeout (in milliseconds) for AI calls |
 | term:fontsize | float | the fontsize for the terminal block |
@@ -50,8 +53,8 @@ For reference this is the current default configuration (v0.8.8):
 ```json
 {
     "ai:model": "gpt-4o-mini",
-    "ai:maxtokens": 1000,
-    "ai:timeoutms": 10000,
+    "ai:maxtokens": 2048,
+    "ai:timeoutms": 60000,
     "autoupdate:enabled": true,
     "autoupdate:installonquit": true,
     "autoupdate:intervalms": 3600000,

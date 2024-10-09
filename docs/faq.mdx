@@ -34,6 +34,14 @@ Here are the ollma open AI compatibility docs: https://github.com/ollama/ollama/
 }
 ```
 
+### How can I connect to Azure AI
+
+You must manually edit the [config file](./config) located at `~/.waveterm/config/settings.json`.
+
+You'll need to set your `ai:baseurl` to your Azure AI Base URL (do not include query parameters or `api-version`).
+You'll also need to set `ai:apitype` to `azure`.  You can then set the `ai:model`, and `ai:apitoken` appropriately
+for your setup.
+
 ### How can I see the block numbers?
 
 The block numbers will appear when you hold down Ctrl-Shift (and disappear once you release the key combo).
@@ -52,5 +60,6 @@ Just remember in JSON, backslashes need to be escaped.  So add this to your [set
 ```json
     "term:localshellpath": "C:\\Program Files\\Git\\bin\\bash.exe"
 ```
+
 
 

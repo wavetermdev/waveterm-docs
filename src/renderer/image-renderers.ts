@@ -17,6 +17,7 @@ const titleElement = ({ children }) =>
                 margin: "25px 225px 10px 0px",
                 color: "#e3e3e3",
                 wordBreak: "break-word",
+                zIndex: 2,
             },
         },
         children
@@ -37,6 +38,7 @@ const headerElement = (header: string, svg: ReactNode) =>
                 display: "flex",
                 alignItems: "center",
                 marginTop: "50px",
+                zIndex: 2,
             },
         },
         svg,
@@ -67,8 +69,24 @@ const rootDivStyle: React.CSSProperties = {
     backgroundColor: "#1b1b1d",
     color: "#e3e3e3",
     borderBottom: "2rem solid #58c142",
-    zIndex: "2 !important",
 };
+
+const bookIcon = join(__dirname, "../../static/img/book-open-cover-regular.svg");
+const bookIconBase64 = `data:image/svg+xml;base64,${readFileSync(bookIcon).toString("base64")}`;
+const bookIconElement = React.createElement("div", {
+    style: {
+        position: "absolute",
+        bottom: "-100px",
+        right: "-100px",
+        height: "500px",
+        width: "500px",
+        backgroundColor: "#58c142bb",
+        zIndex: 1,
+        // background: `url('${bookIconBase64}')`,
+        mask: `url('${bookIconBase64}')`,
+        WebkitMask: `url('${bookIconBase64}')`,
+    },
+});
 
 export const docOgRenderer: ImageRenderer<DocsPageData> = async (data, context) => {
     const element = React.createElement(
@@ -77,7 +95,16 @@ export const docOgRenderer: ImageRenderer<DocsPageData> = async (data, context) 
         waveLogoElement,
         headerElement("Documentation", null),
         React.createElement(titleElement, null, data.metadata.title),
-        React.createElement("div", null, data.metadata.description.replace("&mdash;", "-"))
+        React.createElement(
+            "div",
+            {
+                style: {
+                    zIndex: 2,
+                },
+            },
+            data.metadata.description.replace("&mdash;", "-")
+        ),
+        bookIconElement
     );
 
     return [element, await imageGeneratorOptions()];

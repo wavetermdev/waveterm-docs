@@ -20,6 +20,14 @@
     --ifm-color-primary-lightest: #8cd47d;
 }
 
+body .markdown h1:first-child {
+    --ifm-h1-font-size: 2rem;
+}
+
+body .markdown h2 {
+    --ifm-h2-font-size: 1.75rem;
+}
+
 /* Adds extra margin between last navbar item and the dark mode toggle. */
 .navbar__items--right .navbar__item:last-of-type {
     margin-right: 4px;

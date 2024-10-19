@@ -6,6 +6,19 @@ sidebar_position: 9
 
 # Release Notes
 
+### v0.8.12 &mdash; Oct 18, 2024
+
+* Added support for multiple AI configurations!  You can now run Open AI side-by-side with Ollama models.  Can create AI presets in presets.json, and can easily switch between them using a new dropdown in the AI widget
+* Fix WebSocket reconnection error. this sometimes caused the terminal to hang when waking up from sleep
+* Added memory graphs, and per-CPU graphs to the sysinfo widget (and renamed it from cpuplot)
+* Added a new huge red "Config Error" button when there are parse errors in the config JSON file
+* Preview/CodeEdit widget now shows errors (squiggly lines) when JSON or YAML files fail to parse
+* New app icon for Windows to better match Fluent UI standards
+* Added copy-on-select to the terminal (on by default, can disable using "term:copyonselect")
+* Added a button to mute audio in webviews
+* Added a right-click "Open Clipboard URL" to easily open a webview from an URL stored in your system clipboard
+* [bugfix] fixed blank "help" pages when waking from sleep or restarting the app
+
 ### v0.8.11 &mdash; Oct 10, 2024
 
 Hotfix release to address a couple of bugs introduced in v0.8.10

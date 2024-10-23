@@ -88,6 +88,16 @@ This will use Wave's internal ssh implementation to connect to the specified rem
 
 ---
 
+## wsl
+
+```
+wsh wsl [-d <distribution name>]
+```
+
+This will connect to a WSL distribution on the local machine. It will use the default if no distribution is provided.
+
+---
+
 ## web
 
 You can search for a given url using:
@@ -119,35 +129,61 @@ This command gives the status of all connections made since waveterm started.
 
 ### reinstall
 
+For ssh connections,
 ```
 wsh conn reinstall [user@host]
+```
+
+For wsl connections,
+```
+wsh conn reinstall [wsl://<distribution name>]
 ```
 
 This command reinstalls the Wave Shell Extensions on the specified connection.
 
 ### disconnect
 
+For ssh connections,
 ```
 wsh conn disconnect [user@host]
+```
+
+For wsl connections,
+```
+wsh conn disconnect [wsl://<distribution name>]
 ```
 
 This command completely disconnects the specified connection. This will apply to all blocks where the connection is being used
 
 ### connect
 
+For ssh connections,
 ```
 wsh conn connect [user@host]
+```
+
+For wsl connections,
+```
+wsh conn connect [wsl://<distribution name>]
 ```
 
 This command connects to the specified connection but does not create a block for it.
 
 ### ensure
 
+For ssh connections,
 ```
 wsh conn ensure [user@host]
 ```
 
+For wsl connections,
+```
+wsh conn ensure [wsl://<distribution name>]
+```
+
 This command connects to the specified connection if it isn't already connected.
+
+---
 
 ### setconfig
 

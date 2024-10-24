@@ -6,6 +6,14 @@ sidebar_position: 9
 
 # Release Notes
 
+### v0.8.13 &mdash; Oct 24, 2024
+
+* can now use "term:fontsize" to override an individual terminal block's font size (also in context menu)
+* we now allow mixed case hostnames for connections to be compatible with ssh config
+* [bugfix] fixed a bug that sometimes caused escape sequences to be printed when switching between tabs
+* [bugfix] fixed an issue where the preview block was not cleaning up temp files (Windows only)
+* [bugfix] fixed chrome sandbox permissions errors in linux
+
 ### v0.8.12 &mdash; Oct 18, 2024
 
 * Added support for multiple AI configurations!  You can now run Open AI side-by-side with Ollama models.  Can create AI presets in presets.json, and can easily switch between them using a new dropdown in the AI widget

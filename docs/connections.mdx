@@ -34,7 +34,8 @@ At the moment, we are capable of parsing any SSH config file that does not conta
 |PasswordAuthentication| This is used to specify if password authentication should be attempted. The default is `yes`.|
 |KbdInteractiveAuthentication| This is used to specify if keyboard-interactive authentication should be attempted. The default is `yes`.|
 |PreferredAuthentications| (partial) Specifies the order the client should attempt to authenticate in. It is partially implemented as it does not support `gssapi-with-mic` or `hostbased` authentication. The default is `publickey,keyboard-interactive,password`|
-|AddKeysToAgent| (partial) This option will automatically add keys and their corresponding passphrase to your running SSH agent if it is enabled. It is partially supported as it can only accept `yes` and `no` as valid inputs. Other inputs such as `confirm` or a time interval will behave the same as `no`. The default value is `no`.
+|AddKeysToAgent| (partial) This option will automatically add keys and their corresponding passphrase to your running ssh agent if it is enabled. It is partially supported as it can only accept `yes` and `no` as valid inputs. Other inputs such as `confirm` or a time interval will behave the same as `no`. The default value is `no`.|
+|ProxyJump| Specifies one or more jump proxies in a comma separated list. Each will be visited sequentially using TCP forwarding before connecting to the desired connection (also using TCP forwarding). It can be set to `none` to disable the feature.|
 
 ### Example SSH Config Host
 For a quick example, a host in your config file may look like:

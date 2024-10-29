@@ -19,6 +19,11 @@ const sidebars: SidebarsConfig = {
         },
         {
             type: "doc",
+            id: "customwidgets",
+            label: "Custom Widgets",
+        },
+        {
+            type: "doc",
             id: "telemetry",
             label: "Telemetry",
         },

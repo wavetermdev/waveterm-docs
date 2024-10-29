@@ -6,6 +6,43 @@ sidebar_position: 8
 
 # Release Notes
 
+### v0.9.0 &mdash; Oct 28, 2024
+
+New major Wave Terminal release!  Wave tabs are now cached.  Tab switching performance is
+now much faster and webview state, editor state, and scroll positions are now persisted
+across tab changes.  We also have native WSL2 support.  You can create native Wave connections
+to your Windows WSL2 distributions using the connection button.
+
+We've also laid the groundwork for some big features that will be released over the
+next couple of weeks, including Workspaces, AI improvments, and custom widgets.
+
+Lots of other smaller changes and bug fixes.  See full list of PRs at https://github.com/wavetermdev/waveterm/releases/tag/v0.9.0
+
+### v0.8.13 &mdash; Oct 24, 2024
+
+* Wave is now available as a Snap for Linux users! You can find it [in the Snap Store](https://snapcraft.io/waveterm).
+* Wave is now available via the Windows Package Manager! You can install it via `winget install CommandLine.Wave`
+* can now use "term:fontsize" to override an individual terminal block's font size (also in context menu)
+* we now allow mixed case hostnames for connections to be compatible with ssh config
+* The Linux app icon is now updated to match the Windows icon
+* [bugfix] fixed a bug that sometimes caused escape sequences to be printed when switching between tabs
+* [bugfix] fixed an issue where the preview block was not cleaning up temp files (Windows only)
+* [bugfix] fixed chrome sandbox permissions errors in linux
+* [bugfix] fixed shutdown logic on MacOS/Linux which sometimes allowed orphaned processes to survive
+
+### v0.8.12 &mdash; Oct 18, 2024
+
+* Added support for multiple AI configurations!  You can now run Open AI side-by-side with Ollama models.  Can create AI presets in presets.json, and can easily switch between them using a new dropdown in the AI widget
+* Fix WebSocket reconnection error. this sometimes caused the terminal to hang when waking up from sleep
+* Added memory graphs, and per-CPU graphs to the sysinfo widget (and renamed it from cpuplot)
+* Added a new huge red "Config Error" button when there are parse errors in the config JSON file
+* Preview/CodeEdit widget now shows errors (squiggly lines) when JSON or YAML files fail to parse
+* New app icon for Windows to better match Fluent UI standards
+* Added copy-on-select to the terminal (on by default, can disable using "term:copyonselect")
+* Added a button to mute audio in webviews
+* Added a right-click "Open Clipboard URL" to easily open a webview from an URL stored in your system clipboard
+* [bugfix] fixed blank "help" pages when waking from sleep or restarting the app
+
 ### v0.8.11 &mdash; Oct 10, 2024
 
 Hotfix release to address a couple of bugs introduced in v0.8.10

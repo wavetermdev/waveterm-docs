@@ -4,15 +4,23 @@ id: "config"
 title: "Configuration"
 ---
 
-Wave's configuration files are located at `~/.waveterm/config/`.
+Wave's configuration files are located at `~/.config/waveterm/`.
 
-The main configuration file is `settings.json` (`~/.waveterm/config/settings.json`).
+The main configuration file is `settings.json` (`~/.config/waveterm/settings.json`).
 
 The file is structured as a mostly flat JSON file.  Instead of using sub-objects we prefer to
 use ":" as level separators.
 
+:::info
+
+If you installed Wave pre-v0.9.0 your configuration file will be located at
+`~/.waveterm/config/settings.json`.
+
+:::
+
 | Key Name | Type | Function |
 |----------|------|----------|
+| ai:preset | string | the default AI preset to use |
 | ai:baseurl | string | Set the AI Base Url (must be OpenAI compatible) |
 | ai:apitoken | string | your AI api token |
 | ai:apitype | string | defaults to "open_ai", but can also set to "azure" for special Azure AI handling |
@@ -22,11 +30,13 @@ use ":" as level separators.
 | ai:orgid | string ||
 | ai:maxtokens | int | max tokens to pass to API |
 | ai:timeoutms | int | timeout (in milliseconds) for AI calls |
+| conn:askbeforewshinstall | bool | set to false to disable popup asking if you want to install wsh extensions on new machines |
 | term:fontsize | float | the fontsize for the terminal block |
 | term:fontfamily | string | font family to use for terminal block |
 | term:disablewebgl | bool | set to false to disable WebGL acceleration in terminal |
 | term:localshellpath | string | set to override the default shell path for local terminals |
 | term:localshellopts | string[] | set to pass additional parameters to the term:localshellpath |
+| term:copyonselect | bool | set to false to disable terminal copy-on-select |
 | editor:minimapenabled | bool | set to false to disable editor minimap |
 | editor:stickscrollenabled | bool | |
 | web:openlinksinternally | bool | set to false to open web links in external browser |
@@ -53,17 +63,20 @@ For reference this is the current default configuration (v0.8.8):
 
 ```json
 {
+    "ai:preset": "ai@global",
     "ai:model": "gpt-4o-mini",
     "ai:maxtokens": 2048,
     "ai:timeoutms": 60000,
     "autoupdate:enabled": true,
     "autoupdate:installonquit": true,
     "autoupdate:intervalms": 3600000,
+    "conn:askbeforewshinstall": true,
     "editor:minimapenabled": true,
     "web:defaulturl": "https://github.com/wavetermdev/waveterm",
     "web:defaultsearch": "https://www.google.com/search?q={query}",
     "window:tilegapsize": 3,
-    "telemetry:enabled": true
+    "telemetry:enabled": true,
+    "term:copyonselect": true
 }
 ```
 

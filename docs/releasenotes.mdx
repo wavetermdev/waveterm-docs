@@ -6,6 +6,25 @@ sidebar_position: 8
 
 # Release Notes
 
+### v0.9.1 &mdash; Nov 1, 2024
+
+Minor bug fix release to follow-up on the v0.9.0 build.  Lots of issues fixed (especially for Windows).
+
+* CLI applications that need microphone, camera, or location access will now work on MacOS.  You'll see a security popup in Wave to allow/deny [#1086](https://github.com/wavetermdev/waveterm/issues/1086)
+* Can now use `wsh version -v` to print out the new data/config directories
+* Restores the old T1, T2, T3, ... tab naming logic
+* Temporarily revert to using the "Title Bar" on windows to mitgate a bug where the window controls were overlaying on top of our tabs (working on a real fix for the next release)
+* There is a new setting in the editor to enable/disable word wrapping [#1038](https://github.com/wavetermdev/waveterm/issues/1038)
+* Ctrl-S will now save files in codeedit [#1081](https://github.com/wavetermdev/waveterm/issues/1081)
+* [#1020](https://github.com/wavetermdev/waveterm/issues/1020) there is now a preset config option to change the active border color in tab themes
+* [bugfix] Multiple fixes for [#1167](https://github.com/wavetermdev/waveterm/issues/1167) to try to address tab loss while updating
+* [bugfix] Windows app crashed on opening View menu because of a bad accelerator key
+* [bugfix] The auto-updater messages in the tab bar are now more consistent when switching tabs, and we don't show errors when the network is disconnected
+* [bugfix] Full-screen mode now actually shows tabs in full screen
+* [bugfix] [#1175](https://github.com/wavetermdev/waveterm/issues/1175) can now edit .awk files
+* [bugfix] [#1066](https://github.com/wavetermdev/waveterm/issues/1066) applying a default theme now updates the background appropriately without a refresh
+
+
 ### v0.9.0 &mdash; Oct 28, 2024
 
 New major Wave Terminal release!  Wave tabs are now cached.  Tab switching performance is
